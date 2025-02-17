@@ -5,11 +5,11 @@ const Counter2 = () => {
   const [counter2, setCounter2] = useState(0);
 
   const increaseBy1 = () => {
-    setCounter2(counter2 + 6);
+    setCounter2(counter2 + 1);
   };
 
   const decreaseBy1 = () => {
-    setCounter2(counter2 - 5);
+    setCounter2(counter2 - 1);
   };
 
   return (
