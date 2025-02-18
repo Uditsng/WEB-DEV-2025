@@ -11,7 +11,8 @@ import Counter2 from "./Components/Counter2";
 import ShowProducts from "./Components/ShowProducts";
 import FilterProducts from "./Components/FilterProducts";
 import UseEffect_Uses from "./Components/UseEffect_Uses";
-import form from "./Components/form";
+import Form from "./Components/Form"
+import FormMultipleInputHandler from "./Components/FormMultipleInputHandler";
 
 const App = () => {
   
@@ -71,7 +72,8 @@ const App = () => {
         {/* <UseEffect_Uses/> */}
       </div>
       <div>
-        <form/>
+        {/* <Form/> */}
+        <FormMultipleInputHandler/>
       </div>
     </>
   );
