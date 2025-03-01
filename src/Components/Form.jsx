@@ -7,9 +7,9 @@ const Form = () => {
   const [name, setName] = useState(""); // Holds the username.
   const [email, setEmail] = useState(""); // Holds the email.
 
-  const handleSubmit = (data) => {
+  const handleSubmit = (e) => {
 
-    data.preventDefault(); // to prevent default browser behaviour (i.e. reload page after submittion)
+    e.preventDefault(); // to prevent default browser behaviour (i.e. reload page after submittion)
 
     alert("Your form has been submitted : Name- " +name +" " +", Email- " + email );
 
@@ -27,7 +27,7 @@ const Form = () => {
           <input
             value={name}
             //Event that displays the current values
-            onChange={(data) => setName(data.target.value)} //onChange updates name state on user input
+            onChange={(e) => setName(e.target.value)} //onChange updates name state on user input
             type="text"
           />
           <h5>{name}</h5>
@@ -37,7 +37,7 @@ const Form = () => {
           Email :{" "}
           <input
             value={email}
-            onChange={(data) => setEmail(data.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
           />
           <h5>{email}</h5>

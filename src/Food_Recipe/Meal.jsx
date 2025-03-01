@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Meal.css";
 
 const Meal = () => {
-  const [mealData, setMealData] = useState([]);
-  const [area, setArea] = useState("Indian");
-  const [inputData, setInputData] = useState(" ");
+  const [mealData, setMealData] = useState([]); //stores fetched meal data
+  const [area, setArea] = useState("Indian"); //stores selected cuisine
+  const [inputData, setInputData] = useState(" "); //stores user searched data
 
   useEffect(() => {
     const fetchDataFromAPI = async () => {
@@ -16,7 +16,7 @@ const Meal = () => {
       setMealData(data.meals);
     };
     fetchDataFromAPI();
-  }, [area]);
+  }, [area]);  // runs when "area" changes
 
   const submitHandler = async (e) => {
     e.preventDefault();
